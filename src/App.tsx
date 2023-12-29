@@ -3,9 +3,9 @@ function App() {
 
   return (
     <>
-      <div className="app">
+      <nav className="app bg-gray-20">
         App
-        </div>
+        </nav>
     </>
   )
 }
