@@ -1,6 +1,6 @@
 // import { useState } from "react";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-// import Logo from "@/assets/logo.png"
+import Logo from "@/assets/logo.png"
 
 import Link from "./Link"
 
@@ -18,8 +18,7 @@ const flexBetween ="flex items-center justify-between "
               <div className={`${flexBetween} mx-auto w-5/6`}>
                   {/* LOGO */}
                   <div className={`${flexBetween} w-full gap-16`}>
-                      {/* <img src={logo} alt="Logo-image" /> */}
-                      <h1>LOGO</h1>
+                      <img src={Logo} alt="Logo-image" />
                       {/* RIGHT SIDE */}
                       <div className={`${flexBetween} w-full`}>
                           {/* INNER LEFTSIDE */}
