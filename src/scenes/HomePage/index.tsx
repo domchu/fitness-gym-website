@@ -13,15 +13,15 @@ type Props = {
     setSelectedPage:(value:SelectedPage)=> void
 }
 
-const Home = ({ setSelectedPage }: Props) => {
+const HomePage = ({ setSelectedPage }: Props) => {
     
     const isAboveMediumQueryScreens = useMediaQuery("(min-width:1060px")
   return (
       <section id="home" className="gap-16 bg-gray-20 py-10 md:w-full pb-0">
           {/* IMAGE AND MAIN HEADER */}
-          <div>
+          <div className="md:flex mx-auto w-5/6 items-center justify-center h-5/6">
               {/* MAIN HEADER */}
-              <div>
+              <div className="z-10 mt-32 md:basis-3/5">
                   {/* HEADING */}
                   <div>
                       <div>
@@ -61,4 +61,4 @@ const Home = ({ setSelectedPage }: Props) => {
   )
 }
 
-export default Home
+export default HomePage

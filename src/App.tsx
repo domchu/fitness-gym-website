@@ -1,7 +1,7 @@
 import Navbar from "@/scenes/navbar"
 import { useEffect, useState } from "react"
 import { SelectedPage } from "@/shared/types"
-import Home from '@/scenes/Home';
+import HomePage from "@/scenes/HomePage";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage(selectedPage.Home);
+        setSelectedPage(SelectedPage.Home);
       }
       if (window.screenY !== 0) {
         setIsTopOfPage(false)
@@ -31,7 +31,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         />
-        <Home setSelectedPage={setSelectedPage} />
+        <HomePage setSelectedPage={setSelectedPage} />
         </div>
     </>
   )
