@@ -9,7 +9,7 @@ import SponsorForbes from "@/assets/SponsorForbes.png"
 import SponsorFortune from "@/assets/SponsorFortune.png"
 
 type Props = {
-    SelectedPage: string;
+    // SelectedPage: string;
     setSelectedPage:(value:SelectedPage)=> void
 }
 
@@ -23,16 +23,16 @@ const HomePage = ({ setSelectedPage }: Props) => {
               {/* MAIN HEADER */}
               <div className="z-10 mt-32 md:basis-3/5">
                   {/* HEADING */}
-                  <div>
-                      <div>
-                          <div>
+                  <div className="md:-mt-20">
+                      <div className="relative">
+                          <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                               <img src={HomePageText} alt="Home Page Text" />
                           </div>
                       </div>
-                      <p>Unraviled Gym. Unparalled Traning Fitness Classes. World Class Studio to get that Body Shapes You Dream of ... Get Your Dream Body Now </p>
+                      <p className="mt-8 text-sm ">Unraviled Gym. Unparalled Traning Fitness Classes. World Class Studio to get that Body Shapes You Dream of ... Get Your Dream Body Now </p>
                   </div>
                   {/* ACTION */}
-                  <div>
+                  <div className="mt-8 flex items-center gap-8 ">
                       <ActiveButton setSelectedPage={setSelectedPage}>Join Now</ActiveButton>
                       <AnchorLink className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
                           onClick={() => setSelectedPage(SelectedPage.ContactUs)} href={`#${SelectedPage.ContactUs}`}>Learn More</AnchorLink>

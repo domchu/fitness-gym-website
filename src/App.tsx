@@ -4,6 +4,7 @@ import { SelectedPage } from "@/shared/types"
 import HomePage from "@/scenes/HomePage";
 
 
+
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -31,7 +32,10 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         />
-        <HomePage setSelectedPage={setSelectedPage} />
+        {/* <HomePage setSelectedPage={setSelectedPage} /> */}
+        <HomePage
+          setSelectedPage={setSelectedPage}
+        />
         </div>
     </>
   )
