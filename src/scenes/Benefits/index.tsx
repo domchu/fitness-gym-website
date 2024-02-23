@@ -1,3 +1,4 @@
+import Htext from "@/shared/Htext";
 import { SelectedPage } from "@/shared/types"
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
@@ -14,6 +15,9 @@ const Benefits = ({setSelectedPage}: Props) => {
         <motion.div  onViewportEnter={() =>setSelectedPage(SelectedPage.Home)}>
           
         </motion.div>
+        <div>
+         <Htext>MORE THAN JUST A GYM</Htext>
+        </div>
 
         
     </section>
