@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { SelectedPage } from "@/shared/types"
 import HomePage from "@/scenes/HomePage";
 import Benefits from "@/scenes/Benefits";
+import OurClasses from "@/scenes/OurClasses";
 
 
 
@@ -33,14 +34,14 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         />
-        {/* <HomePage setSelectedPage={setSelectedPage} /> */}
         <HomePage
           setSelectedPage={setSelectedPage}
-        />
+          />
         
         <Benefits
           setSelectedPage={setSelectedPage}
-        />
+          />
+          <OurClasses setSelectedPage={setSelectedPage} />
         </div>
     </>
   )
