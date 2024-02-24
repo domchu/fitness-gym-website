@@ -81,15 +81,15 @@ const Benefits = ({setSelectedPage}: Props) => {
           ))}
           </motion.div>
           {/* GRAPHIC & DESCRIPTION */}
-          <div className="mt-20 items-center justify-between gap-20 md:mt-20 md:flex">
+          <div className="mt-20 mb-10 items-center justify-between gap-20 md:mt-20 md:flex">
             {/* IMAGE */}
-            <img src={BenefitsPageGraphic} alt="Benefits Image Graphic" className="mx-auto" />
+            <img src={BenefitsPageGraphic} alt="Benefits Image Graphic" className="mx-auto " />
 
             {/* DESCRIPTION */}
             <div>
 {/* TITLE */}
               <div className="relative">
-                <div className="before:absolute before:-top-20 left:-20 before:-z[-1] before:content-abstractwaves">
+                <div className="mt-20 before:absolute before:-top-20 left:-20 before:-z[-1] before:content-abstractwaves">
                   <motion.div
                    initial="hidden"
                    whileInView="visible"
