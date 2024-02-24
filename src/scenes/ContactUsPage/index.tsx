@@ -2,19 +2,31 @@ import { SelectedPage } from '@/shared/types'
 import { motion } from 'framer-motion'
 import Htext from '@/shared/Htext';
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 
 type Props = {
     setSelectedPage:(value: SelectedPage) => void
 }
 
-const ContactUs = ({ setSelectedPage }: Props) => {
-    
-    const handleSubmit = () => {
-     
- }
+  const ContactUsPage = ({ setSelectedPage }: Props) => {
 
+    // const {
+    //     register,
+    //     trigger,
+    //     formState: { error }
+    // } = useForm()
+    
+    //   const handleSubmit = async (e: any) => {
+    //       const inValid = await trigger()
+    //       if (!inValid) {
+    //           e.preventDefault()
+            
+     
+    //       }
+    //   }
+
+        const inputStyles = `w-full rounded-lg bg-primary-300 px-3 py-5 placeholder-white`;
 
   return (
       <section id='contactus' className='mx-auto w-5/6 pt-24'>
@@ -46,9 +58,29 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                       visible:{opacity: 1, y:0}
                   }}
                   >
-                      <form onSubmit={handleSubmit}>
+                      <form
+                          action='https://formsubmit.co/your@gmail.com'
+                        //   onSubmit={handleSubmit}
+                          target='_blank'
+                          method='POST'>
+                          
+                          <input
+                              type="text"
+                              placeholder="NAME"
+                              className={inputStyles}
+                        //   {...register}
+                          /> 
+                          <input
+                              type="email"
+                              placeholder="EMAIL"
+                              className={inputStyles}
+                        //   {...register}
+                          /> 
+                          <textarea placeholder="MESSAGE" cols="30" rows="10" className={inputStyles}></textarea>
                           
                       </form>
+
+                      <img src={ContactUsPageGraphic} alt=" Contact Us Person" />
                   </motion.div>
                   
               </div>
@@ -56,5 +88,4 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     </section>
   )
 }
-
-export default ContactUs
+export default ContactUsPage;
