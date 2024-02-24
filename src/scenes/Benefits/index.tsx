@@ -3,6 +3,8 @@ import { BenefitType, SelectedPage } from "@/shared/types"
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Benefit from "./Benefit";
+import ActiveButton from "@/shared/ActiveButton";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 
 
 const benefits: Array<BenefitType> = [
@@ -42,7 +44,7 @@ const Benefits = ({setSelectedPage}: Props) => {
       <section id="benefits" className="mx-auto min-h-full w-5/6">
         <motion.div  onViewportEnter={() =>setSelectedPage(SelectedPage.Home)}>
           
-        </motion.div>
+       
 
         {/* HEADER COMMENT */}
         <motion.div
@@ -77,8 +79,38 @@ const Benefits = ({setSelectedPage}: Props) => {
               setSelectedPage={setSelectedPage}
             />
           ))}
+          </motion.div>
+          {/* GRAPHIC & DESCRIPTION */}
+          <div className="mt-16 items-center justify-between gap-20 md:mt-20 md:flex">
+            {/* IMAGE */}
+            <img src={BenefitsPageGraphic} alt="Benefits Image Graphic" className="mx-auto" />
+
+            {/* DESCRIPTION */}
+            <div>
+{/* TITLE */}
+              <div className="relative">
+                <div className="before:absolute before:-top-20 left:-20 before:-z[-1] before:content-abstractwaves">
+                  <div>
+                    <Htext>MILLION OF HAPPY MEMEBERS GETTING {" "} <span className="text-primary-500">FIT</span></Htext>
+                  </div>
+
+                </div>
+</div>
+              {/* DESCRIPTION*/}
+              <div>
+                <p className="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus expedita fuga vel sint accusamus officia, eaque nulla enim esse.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus expedita fuga vel sint accusamus officia, eaque nulla enim esse.</p>
+                <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus expedita fuga vel sint accusamus officia, eaque nulla enim esse.</p>
+              </div>
+{/* BUTTON */}
+              <div className="relative">
+                <div className="before:absolute before:-bottom-20 before:right-40 before:-z-[-1] before:content-sparkles"></div>
+                <ActiveButton setSelectedPage={setSelectedPage}>
+                  Join Now
+                </ActiveButton>
+</div>
+            </div>
+          </div>
         </motion.div>
-        
     </section>
     </>
   )
