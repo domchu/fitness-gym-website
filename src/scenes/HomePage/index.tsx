@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 
 
 type Props = {
-    // SelectedPage: string;
     setSelectedPage:(value:SelectedPage)=> void
 }
 
