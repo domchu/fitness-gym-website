@@ -8,8 +8,8 @@ import { useForm } from "react-hook-form";
 type Inputs = {
     name: string;
     required: string;
-    email: string | number;
-    message: string | number;
+    email: string;
+    message: string;
   }
 
 type Props = {
