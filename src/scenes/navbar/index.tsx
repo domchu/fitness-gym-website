@@ -5,7 +5,6 @@ import Link from "./Link"
 import {SelectedPage} from "@/shared/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import ActiveButton from "@/shared/ActiveButton";
-ActiveButton
 
 type Props = {
     isTopOfPage: boolean;
@@ -14,10 +13,10 @@ type Props = {
 }
 
 const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
-    const flexBetween = "flex items-center justify-between "
-    const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
-    const isAboveMediumQueryScreens = useMediaQuery("(min-width:1060px")
-    const navbarBackground = isTopOfPage ? "" : "bg-primary-300 drop-shadow"
+    const flexBetween = "flex items-center justify-between ";
+    const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+    const isAboveMediumQueryScreens = useMediaQuery("(min-width:1060px");
+    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
 
 
 
@@ -31,7 +30,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                       {/* RIGHT SIDE */}
 
 
-{isAboveMediumQueryScreens ? (
+                {isAboveMediumQueryScreens ? (
                       
                       <div className={`${flexBetween} w-full`}>
                           {/* INNER LEFTSIDE */}
@@ -68,7 +67,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                               <button className="rounded-full bg-secondary-500 py-2" onClick={() =>setIsMenuToggled(!isMenuToggled)}>
                                 <Bars3Icon className="h-6 w-10 text-white"/>  
                             </button>
-                            )}
+                )}
                           
                   </div>  
           </div>
