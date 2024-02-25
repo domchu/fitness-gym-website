@@ -66,7 +66,7 @@ type Props = {
                   }}
                   >
                       <form
-                          action='https://formsubmit.co/bridgekodetech@gmail.com'
+                          action='https://formsubmit.co/francisoffionor249@gmail.com'
                           onSubmit={handleSubmit}
                           target='_blank'
                           method='POST'>
@@ -125,7 +125,7 @@ type Props = {
                       </form>
 
                   </motion.div>
-                  <motion.div className='relative mt-16 basis-2/5 md:0'
+                  <motion.div className='relative mt-16  md:0'
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.5 }}
@@ -137,7 +137,7 @@ type Props = {
                   >
                       <div className='md:before:content-evolvetext w-full before:absolute before:z-[-1] before:-bottom-20 before:-right-10'>
                           
-                  <img src={ContactUsPageGraphic} alt=" Contact Us Person" />
+                  <img src={ContactUsPageGraphic} alt=" Contact Us Person" className='w-full' />
                       </div>
                 </motion.div>
                   
