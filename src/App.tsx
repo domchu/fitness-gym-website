@@ -37,7 +37,7 @@ function App() {
         />
         <HomePage
           setSelectedPage={setSelectedPage}
-          />
+        />
         
         <Benefits
           setSelectedPage={setSelectedPage}
